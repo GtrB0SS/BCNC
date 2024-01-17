@@ -15,7 +15,6 @@ import com.springBoot.bcncapp.repositories.AlbumRepository;
 import com.springBoot.bcncapp.repositories.PhotoRepository;
 
 //DataServiceImpl.java
-//DataServiceImpl.java
 @Service
 public class DataServiceImpl implements DataService {
 
@@ -68,17 +67,18 @@ public class DataServiceImpl implements DataService {
  }
 
  private List<Album> fetchAlbums() {
-    // Lógica para obtener álbumes desde el API ALBUMS_API_URL
+    // Obtener álbumes desde el API ALBUMS_API_URL
 	Album[] albumsArray = restTemplate.getForObject(ALBUMS_API_URL, Album[].class);
     return Arrays.asList(albumsArray);
 	
  }
 
  private List<Photo> fetchPhotos() {
-    // Lógica para obtener fotos desde el API PHOTO_API_URL
+	 // Obtener fotos desde el API PHOTO_API_URL
 	 Photo[] photosArray = restTemplate.getForObject(PHOTOS_API_URL, Photo[].class);
 	 return Arrays.asList(photosArray);
  }
+ 
 }
 
 

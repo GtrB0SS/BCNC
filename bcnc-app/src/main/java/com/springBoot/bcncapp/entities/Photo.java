@@ -14,7 +14,6 @@ public class Photo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Cambia el nombre lógico a "albumId" y utiliza @JoinColumn para especificar el nombre físico
     @ManyToOne
     @JoinColumn(name = "album_id")
     private Album album;

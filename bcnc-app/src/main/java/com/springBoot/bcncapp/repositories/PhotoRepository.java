@@ -9,5 +9,5 @@ import com.springBoot.bcncapp.entities.Photo;
 
 @Repository
 public interface PhotoRepository extends JpaRepository<Photo, Long> {
-    //List<Photo> findByAlbumId(Long albumId);
+
 }
